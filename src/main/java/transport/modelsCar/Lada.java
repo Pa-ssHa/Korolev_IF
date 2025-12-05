@@ -1,14 +1,18 @@
-package cars;
+package transport.modelsCar;
 
-public class Kia extends Car{
+import transport.Car;
+import transport.enums.Color;
+import transport.enums.Transmission;
 
-    public Kia(int year, String transmission, String model, String color, double power, double weight) {
+public class Lada extends Car {
+
+    public Lada(int year, Transmission transmission, String model, Color color, double power, double weight) {
         super(year, transmission, model, color, power, weight);
     }
 
     @Override
     public String getInfo() {
-        return "Kia - " + getModel() +
+        return "Lada - " + getModel() +
                 ". Год выпуска: " + getYear() + ", " +
                 "КПП: " + getTransmission() +
                 ", цвет: " + getColor() +

@@ -1,14 +1,19 @@
-package cars;
+package transport;
+
+import transport.enums.Color;
+import transport.enums.Transmission;
 
 public abstract class Car {
     private int year;
-    private String transmission;
+    private Transmission transmission;
     private String model;
-    private String color;
+    private Color color;
     private double power;
     private double weight;
 
-    public Car(int year, String transmission, String model, String color, double power, double weight) {
+    public abstract String getInfo();
+
+    public Car(int year, Transmission transmission, String model, Color color, double power, double weight) {
         this.year = year;
         this.transmission = transmission;
         this.model = model;
@@ -16,8 +21,6 @@ public abstract class Car {
         this.power = power;
         this.weight = weight;
     }
-
-    public abstract String getInfo();
 
     public int getYear() {
         return year;
@@ -27,11 +30,11 @@ public abstract class Car {
         this.year = year;
     }
 
-    public String getTransmission() {
+    public Transmission getTransmission() {
         return transmission;
     }
 
-    public void setTransmission(String transmission) {
+    public void setTransmission(Transmission transmission) {
         this.transmission = transmission;
     }
 
@@ -43,11 +46,11 @@ public abstract class Car {
         this.model = model;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 
